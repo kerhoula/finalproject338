@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Landing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            width:100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows: 50vh 40vh 40vh 30vh;
+            gap: 0px;
+        }
+        .postcard{
+            grid-column: 1 / -1;
+        }
+        .textleft{
+            grid-column : 1/ 5;
+            background-color: lightblue;
+        }
+        .pictureright{
+            grid-column: 5 / -1;
+            background-color: lightgreen;
+        }
+        .textright{
+            grid-column : 4/ -1;
+            grid-row: 3; 
+            /* had to add "grid-row: 3" because the .textright and .pictureleft would go to separate lines without this line */
+            background-color: lightblue;
+        }
+        .pictureleft{
+            grid-column: 1 / 4;
+            grid-row: 3;
+            background-color: lightgreen;
+        }
+        .bottom{
+            grid-column: 1 / -1;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <header>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="index.html" class="logo">
+      <img src="images/postcard.png" alt="Anna in Dublin home">
+    </a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="guinness.html">Guinness</a>
+        <ul class="dropdown-menu">
+          <li><a href="storehouse.html">Storehouse</a></li>
+          <li><a href="pubs.html">Pubs</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="places.html">Places</a>
+        <ul class="dropdown-menu">
+          <li><a href="galway.html">Galway</a></li>
+          <li><a href="cliffsofmoher.html">Cliffs of Moher</a></li>
+          <li><a href="dublin.html">Dublin</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+    <main>
+        <div class="container">
+            <!-- row1 postcard beauty -->
+            <div class="postcard">
+                <img src="images/postcard.png" alt="Postcard from Dublin">
+            </div> 
+            <!-- row2 guiness -->
+            <div class="textleft">text breifly decribing guiness culture in ireland, guiness storehouse tour CTA and pubs i went to CTA</div>
+            <div class="pictureright">patterned photo as background with a picture of guiness layered overtop</div>
+            <!-- row3 galway -->
+            <div class="textright">text describing how on weekend 2 we took an overnight trip to galway, Explore more CTA</div>
+            <div class="pictureleft">patterned photo as background with a something gallway-ey</div></div>
+            <!-- row 4 footer -->
+            <div class = "bottom">footer</div>
+        </div>
+    </main>
+</body>
+</html>
