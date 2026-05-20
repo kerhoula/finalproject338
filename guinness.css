@@ -1,0 +1,187 @@
+/* GUINNESS PAGE */
+.guinness-hero{
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 5rem;
+    background-color: var(--cream);
+}
+
+.guinness-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.eyebrow{
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    margin: 0;
+}
+
+.guinness-text h1{
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+    margin: 0;
+    color: var(--dark-green);
+    max-width: 9ch;
+}
+
+.guinness-text p{
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 45ch;
+    color: var(--dark-grey);
+}
+
+/* GAME SIDE */
+.guinness-game{
+    background-color: var(--dark-green);
+    background-size: cover;
+    background-position: center;
+
+    padding: 3rem;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    box-shadow: 8px 8px 0 var(--dark-grey);
+}
+
+/* LOWER LINK CARDS */
+.guinness-links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.guinness-card{
+    padding: 5rem;
+    min-height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.guinness-card:first-child{
+    background-color: var(--lime);
+}
+
+.guinness-card:last-child{
+    background-color: var(--yellow);
+
+}
+
+.guinness-card h2{
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    margin: 0;
+    color: var(--dark-grey);
+    max-width: 8ch;
+}
+
+.guinness-card p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 45ch;
+    color: var(--dark-grey);
+}
+
+@media screen and (max-width: 768px){
+
+    .guinness-hero{
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .guinness-text h1{
+        font-size: 3.2rem;
+    }
+
+    .guinness-game{
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .guinness-links{
+        grid-template-columns: 1fr;
+    }
+
+    .guinness-card{
+        padding: 3rem 2rem;
+        min-height: auto;
+    }
+}
+
+/* SPLIT THE G BUTTON */
+#split-button{
+    margin-top: 2rem;
+
+    background-color: var(--cream);
+    color: var(--dark-grey);
+
+    border: 4px solid var(--orange);
+
+    padding: 1rem 2.5rem;
+
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.35);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/* HOVER */
+#split-button:hover{
+    background-color: var(--orange);
+    border: 4px solid var(--dark-grey);
+    color: var(--cream);
+    transform: translate(-4px, -4px);
+
+    box-shadow: 12px 12px 0 rgba(0,0,0,0.35);
+}
+
+/* CLICK */
+#split-button:active{
+    transform: translate(2px, 2px);
+
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.35);
+}
+
+/* MESSAGE TEXT */
+#split-message{
+    margin-top: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: var(--cream);
+
+    text-align: center;
+
+    max-width: 20ch;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.5px;
+}

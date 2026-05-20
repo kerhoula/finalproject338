@@ -5,6 +5,7 @@
     --red: #d52518;
     --dark-green: #18542a;
     --lime: #9abc05;
+    --dark-grey: #333333;
 
     --shadow: rgba(0,0,0,0.3);
 }
@@ -29,31 +30,28 @@ a{
             width:100%;
             margin: auto;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-            grid-template-rows: auto auto auto auto auto;   
+            grid-template-columns: repeat(7, 1fr); 
+            grid-template-rows: auto auto auto auto ;   
             gap: 0px;
         }
         .postcard{
             grid-column: 1 / -1;
+            min-height:60vh;
         }
         .textleft{
             grid-column : 1/ 5;
-            background-color: lightblue;
         }
         .pictureright{
             grid-column: 5 / -1;
-            background-color: lightgreen;
         }
         .textright{
             grid-column : 4/ -1;
             grid-row: 3; 
             /* had to add "grid-row: 3" because the .textright and .pictureleft would go to separate lines without this line */
-            background-color: lightblue;
         }
         .pictureleft{
             grid-column: 1 / 4;
             grid-row: 3;
-            background-color: lightgreen;
         }
         .bottom{
             grid-column: 1 / -1;
@@ -64,7 +62,7 @@ a{
 .postcard{
     grid-column: 1 / -1;
 
-    background-image: url("images/cliffsofmoher/cliffs5.JPG");
+    background-image: url("images/sheepbackground.JPG");
     background-size: cover;
     background-position: center;
 
@@ -81,13 +79,35 @@ a{
     transform: rotate(-4deg);
 
     box-shadow: 0 6px 15px var(--shadow);
+
+    animation: postcardDrop 1.8s ease;
+}
+/* COLLEEN'S IDEA DROP MAY20 */
+@keyframes postcardDrop {
+  0%{
+    transform:
+      translateY(-150%)
+      rotate(-18deg);
+
+    opacity: 0;
+  }
+  70%{
+    transform:
+      translateY(20px)
+      rotate(-6deg);
+  }
+  100%{
+    transform:
+      translateY(0)
+      rotate(-4deg);
+    opacity: 1;
+  }
 }
 
 /* PICTURE RIGHT/LEFT */
 .pictureright{
     grid-column: 5 / -1;
-    /* background-image: url("images/lord_edward/le_cider.JPG"); */
-    background-color: var(--lime);
+    background-image: url("images/stripespattern1.svg");
     background-size: cover;
     background-position: center;
     display: flex; 
@@ -99,12 +119,13 @@ a{
     width: 350px;
     max-width: 95%;
     object-fit: cover;
-    box-shadow: 0 6px 15px var(--shadow);
+    border-width:10px;
+    border-style: solid;
+    border-color: var(--dark-grey);
 }
 .pictureleft{
     grid-column: 1 / 4;
-    /* background-image: url("images/lord_edward/le_cider.JPG"); */
-    background-color: var(--orange);
+    background-image: url("images/stripespattern1.svg"); /*not adding alt:"" because google says screenreaders skip background images automatically*/
     background-size: cover;
     background-position: center;
     display: flex; 
@@ -116,7 +137,69 @@ a{
     width: 350px;
     max-width: 95%;
     object-fit: cover;
-    box-shadow: 0 6px 15px var(--shadow);
+    border-width:10px;
+    border-style: solid;
+    border-color: var(--dark-grey);
+
+}
+
+/* TEXT RIGHT/LEFT */
+.textleft,
+.textright{
+    background-color: var(--yellow);
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.textright{
+    background-color: var(--lime);
+}
+
+.textleft h2,
+.textright h2{
+    font-size: clamp(2.8rem, 5vw, 4rem); /* min,scaling,max */
+    line-height: 0.9;
+    margin: 0;
+    color: var(--dark-grey);
+    max-width: 16ch;
+}
+
+.textleft p,
+.textright p{
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 45ch;
+    margin: 0;
+    color: var(--dark-grey);
+}
+
+.cta-button{
+    align-self: flex-start;
+
+    background-color: var(--cream);
+    color: var(--dark-grey);
+
+    padding: 1rem 2rem;
+    border: 3px solid var(--dark-grey);
+
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    box-shadow: 6px 6px 0 var(--dark-grey);
+    transition: 0.3s ease;
+}
+
+.cta-button:hover{
+    background-color: var(--orange);
+    color: var(--cream);
+
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0 var(--dark-grey);
 }
 
 /* NAVBAR */
@@ -163,7 +246,7 @@ border-image: repeating-linear-gradient(
 }
 .nav-links a:hover{
     background-color: var(--yellow);
-    color: var(--dark-green);
+    color: var(--dark-grey);
 }
 .nav-links a.current{
     color: var(--yellow);
@@ -189,14 +272,14 @@ border-image: repeating-linear-gradient(
     box-shadow: 0 4px 10px var(--shadow);
 }
 .dropdown-menu a{
-    color: var(--dark-green);
+    color: var(--dark-grey);
     display: block;
     padding: 1rem;
     transition: 0.3s ease;
 }
 .dropdown-menu a:hover{
     background-color: var(--yellow);
-    color: var(--dark-green);
+    color: var(--dark-grey);
 }
 .dropdown:hover .dropdown-menu{
     display: block;
@@ -251,7 +334,7 @@ border-image: repeating-linear-gradient(
         border-radius: 0;
     }
     .dropdown-menu a{
-        color: var(--dark-green);
+        color: var(--dark-grey);
         padding-left: 3rem;
     }
     .dropdown-menu a:hover{
@@ -297,26 +380,26 @@ border-image: repeating-linear-gradient(
 /* EACH IMAGE CARD */
 .gallery-grid a {
   display: block;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   overflow: hidden;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
   /* ALTERNATING BORDERS */
 .gallery-grid a:nth-child(5n+1) {
-  border: 6px solid var(--yellow);
+  border: 10px solid var(--yellow);
 }
 .gallery-grid a:nth-child(5n+2) {
-  border: 6px solid var(--orange);
+  border: 10px solid var(--orange);
 }
 .gallery-grid a:nth-child(5n+3) {
-  border: 6px solid var(--red);
+  border: 10px solid var(--red);
 }
 .gallery-grid a:nth-child(5n+4) {
-  border: 6px solid var(--dark-green);
+  border: 10px solid var(--dark-green);
 }
 .gallery-grid a:nth-child(5n+5) {
-  border: 6px solid var(--lime);
+  border: 10px solid var(--lime);
 }
 
 /* IMAGES */
@@ -368,5 +451,15 @@ border-image: repeating-linear-gradient(
     .bottom{
         grid-row: 6;
     }
+
+    .textleft,
+    .textright{
+    padding: 3rem 2rem;
+}
+
+    .textleft h2,
+    .textright h2{
+    font-size: 3rem;
+}
     /* the grid-row lets me reorder my boxes when in mobile so the images are every other */
 }

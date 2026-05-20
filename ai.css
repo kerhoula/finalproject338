@@ -1,0 +1,100 @@
+/* GUINNESS GAME */
+
+.guinness-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+#guinness-glass{
+    position: relative;
+    width: 220px;
+    height: 340px;
+
+    background-color: rgba(17, 17, 17, 0.55);
+    border: 10px solid var(--orange);
+
+    clip-path: polygon(12% 0%, 88% 0%, 75% 100%, 25% 100%); */
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* cream foam inside the drink */
+#foam{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    background-color: var(--cream);
+    transition: height 0.8s ease;
+    background-color: rgba(243, 232, 204, 0.9);
+
+    z-index: 3;
+
+}
+
+/* the remaining Guinness */
+.glass-body{
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(17, 17, 17, 0.62);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+
+/* fake glass shine */
+#guinness-glass::after{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 45px;
+
+    width: 28px;
+    height: 230px;
+
+    background-color: rgba(255,255,255,0.18);
+    border-radius: 50px;
+
+    z-index: 4;
+}
+
+/* horizontal logo */
+.guinness-logo{
+    position: relative;
+    transform: translateY(-32.5px);
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: white;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.harp-logo{
+    width: 55px;
+    height: auto;
+
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.35));
+}
+
