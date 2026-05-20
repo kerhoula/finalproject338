@@ -55,8 +55,8 @@ a{
         }
         .bottom{
             grid-column: 1 / -1;
-            background-color: lightcoral;
-        }
+            background-color: var(--dark-green);
+}
 
 /* POSTCARD */
 .postcard{
