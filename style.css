@@ -15,16 +15,50 @@ body{
     font-family: Helvetica, sans-serif;
     background-color: var(--cream);
 }
-
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 a{
     text-decoration: none;
 }
+
+/* GRID LAYOUT */
+        .container{
+            width:100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows: auto auto auto auto auto;   
+            gap: 0px;
+        }
+        .postcard{
+            grid-column: 1 / -1;
+        }
+        .textleft{
+            grid-column : 1/ 5;
+            background-color: lightblue;
+        }
+        .pictureright{
+            grid-column: 5 / -1;
+            background-color: lightgreen;
+        }
+        .textright{
+            grid-column : 4/ -1;
+            grid-row: 3; 
+            /* had to add "grid-row: 3" because the .textright and .pictureleft would go to separate lines without this line */
+            background-color: lightblue;
+        }
+        .pictureleft{
+            grid-column: 1 / 4;
+            grid-row: 3;
+            background-color: lightgreen;
+        }
+        .bottom{
+            grid-column: 1 / -1;
+            background-color: lightcoral;
+        }
 
 /* POSTCARD */
 .postcard{
@@ -40,7 +74,6 @@ a{
 
     padding: 2rem;
 }
-
 .postcard img{
     width: 350px;
     max-width: 90%;
@@ -50,21 +83,53 @@ a{
     box-shadow: 0 6px 15px var(--shadow);
 }
 
+/* PICTURE RIGHT/LEFT */
+.pictureright{
+    grid-column: 5 / -1;
+    /* background-image: url("images/lord_edward/le_cider.JPG"); */
+    background-color: var(--lime);
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.pictureright img{
+    width: 350px;
+    max-width: 95%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px var(--shadow);
+}
+.pictureleft{
+    grid-column: 1 / 4;
+    /* background-image: url("images/lord_edward/le_cider.JPG"); */
+    background-color: var(--orange);
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.pictureleft img{
+    width: 350px;
+    max-width: 95%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px var(--shadow);
+}
+
 /* NAVBAR */
 .navbar{
     background-color: var(--dark-green);
     padding: 1rem 2rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     position: sticky;
     top: 0;
     z-index: 1000;
-
     border-top: 10px solid transparent;
-
 border-image: repeating-linear-gradient(
     to right,
     var(--yellow) 0 20px,
@@ -75,11 +140,9 @@ border-image: repeating-linear-gradient(
     var(--lime) 100px 120px
 ) 1;
 }
-
 .logo img{
-    height: 55px;
+    height: 50px;
 }
-
 .nav-links{
     display: flex;
     align-items: center;
@@ -89,7 +152,6 @@ border-image: repeating-linear-gradient(
     margin: 0;
     padding: 0;
 }
-
 .nav-links a{
     color: var(--cream);
     font-weight: bold;
@@ -99,12 +161,10 @@ border-image: repeating-linear-gradient(
 
     transition: 0.3s ease;
 }
-
 .nav-links a:hover{
     background-color: var(--yellow);
     color: var(--dark-green);
 }
-
 .nav-links a.current{
     color: var(--yellow);
 
@@ -117,37 +177,27 @@ border-image: repeating-linear-gradient(
 .dropdown{
     position: relative;
 }
-
 .dropdown-menu{
     display: none;
-
     position: absolute;
     top: 100%;
     left: 0;
-
     background-color: var(--cream);
     min-width: 180px;
-
     /* border-radius: 8px; */
     overflow: hidden;
-
     box-shadow: 0 4px 10px var(--shadow);
 }
-
 .dropdown-menu a{
     color: var(--dark-green);
-
     display: block;
     padding: 1rem;
-
     transition: 0.3s ease;
 }
-
 .dropdown-menu a:hover{
     background-color: var(--yellow);
     color: var(--dark-green);
 }
-
 .dropdown:hover .dropdown-menu{
     display: block;
 }
@@ -156,7 +206,6 @@ border-image: repeating-linear-gradient(
 #menu-toggle{
     display: none;
 }
-
 .hamburger{
     display: none;
 
@@ -166,62 +215,45 @@ border-image: repeating-linear-gradient(
     cursor: pointer;
 }
 
-/* MOBILE */
+/* MOBILE MEDIA QUERY*/
 @media screen and (max-width: 700px){
-
     .hamburger{
         display: block;
     }
-
     .nav-links{
         display: none;
-
         position: absolute;
         top: 100%;
         left: 0;
-
         width: 100%;
-
         background-color: var(--dark-green);
-
         flex-direction: column;
         align-items: stretch;
-
         gap: 0;
     }
-
     .nav-links li{
         width: 100%;
     }
-
     .nav-links a{
         display: block;
         padding: 1rem 2rem;
 
         border-radius: 0;
     }
-
     #menu-toggle:checked ~ .nav-links{
         display: flex;
     }
-
     .dropdown-menu{
         position: static;
-
         display: block;
-
         background-color: var(--cream);
-
         box-shadow: none;
         border-radius: 0;
     }
-
     .dropdown-menu a{
         color: var(--dark-green);
-
         padding-left: 3rem;
     }
-
     .dropdown-menu a:hover{
         background-color: var(--orange);
         color: var(--cream);
@@ -233,43 +265,31 @@ border-image: repeating-linear-gradient(
     position: absolute;
     left: -999px;
 }
-
 .skip-link:focus{
     left: 20px;
     top: 20px;
-
     background-color: var(--yellow);
     color: var(--dark-green);
-
     padding: 1rem;
-
     z-index: 2000;
 }
 
 /* GALLERY */
-
-/* GALLERY SECTION */
 .gallery {
   padding: 3rem 2rem;
   background-color: var(--cream);
 }
-
 .gallery h2 {
   text-align: center;
   font-size: 3rem;
   color: var(--dark-green);
   margin-bottom: 2rem;
 }
-
-/* GRID LAYOUT */
 .gallery-grid {
   display: grid;
-
   grid-template-columns:
     repeat(auto-fit, minmax(250px, 1fr));
-
   gap: 1.2rem;
-
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -277,11 +297,8 @@ border-image: repeating-linear-gradient(
 /* EACH IMAGE CARD */
 .gallery-grid a {
   display: block;
-
   border-radius: 20px;
-
   overflow: hidden;
-
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
@@ -289,34 +306,25 @@ border-image: repeating-linear-gradient(
 .gallery-grid a:nth-child(5n+1) {
   border: 6px solid var(--yellow);
 }
-
 .gallery-grid a:nth-child(5n+2) {
   border: 6px solid var(--orange);
 }
-
 .gallery-grid a:nth-child(5n+3) {
   border: 6px solid var(--red);
 }
-
 .gallery-grid a:nth-child(5n+4) {
   border: 6px solid var(--dark-green);
 }
-
 .gallery-grid a:nth-child(5n+5) {
   border: 6px solid var(--lime);
 }
 
-
 /* IMAGES */
 .gallery-grid img {
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
-
   display: block;
-
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
@@ -325,7 +333,40 @@ border-image: repeating-linear-gradient(
 /* HOVER EFFECT */
 .gallery-grid a:hover img {
   transform: scale(1.08);
-
   filter: brightness(1.08);
 }
 
+/* HOMEPAGE ORDERING */
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .postcard,
+    .textleft,
+    .pictureright,
+    .textright,
+    .pictureleft,
+    .bottom{
+        grid-column: 1 / -1;
+    }
+    .postcard{
+        grid-row: 1;
+    }
+    .textleft{
+        grid-row: 2;
+    }
+    .pictureright{
+        grid-row: 3;
+    }
+    .textright{
+        grid-row: 4;
+    }
+    .pictureleft{
+        grid-row: 5;
+    }
+    .bottom{
+        grid-row: 6;
+    }
+    /* the grid-row lets me reorder my boxes when in mobile so the images are every other */
+}

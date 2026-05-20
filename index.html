@@ -5,50 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project Landing</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-      
-        .container{
-            width:100%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-            grid-template-rows: 50vh 40vh 40vh 30vh;
-            gap: 0px;
-        }
-        .postcard{
-            grid-column: 1 / -1;
-        }
-        .textleft{
-            grid-column : 1/ 5;
-            background-color: lightblue;
-        }
-        .pictureright{
-            grid-column: 5 / -1;
-            background-color: lightgreen;
-        }
-        .textright{
-            grid-column : 4/ -1;
-            grid-row: 3; 
-            /* had to add "grid-row: 3" because the .textright and .pictureleft would go to separate lines without this line */
-            background-color: lightblue;
-        }
-        .pictureleft{
-            grid-column: 1 / 4;
-            grid-row: 3;
-            background-color: lightgreen;
-        }
-        .bottom{
-            grid-column: 1 / -1;
-            background-color: lightcoral;
-        }
-    </style>
+    
 </head>
 <body>
     <header>
   <a class="skip-link" href="#main">Skip to main content</a>
   <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo">
-      <img src="images/postcard.png" alt="Anna in Dublin home">
+      <img src="images/postcard.png" loading="lazy" alt="Home">
     </a>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="hamburger">☰</label>
@@ -79,11 +43,27 @@
                 <img src="images/postcard.png" alt="Postcard from Dublin">
             </div> 
             <!-- row2 guiness -->
-            <div class="textleft">text breifly decribing guiness culture in ireland, guiness storehouse tour CTA and pubs i went to CTA</div>
-            <div class="pictureright">patterned photo as background with a picture of guiness layered overtop</div>
+            <div class="textleft">
+              <h2> Guinness Culture </h2>
+              <p>Guinness is everywhere in Ireland! From historic pubs full of live music to the iconic Guinness Storehouse experience at St. James’s Gate.</p>
+              <a href="guinness.html" class="cta-button">Explore Guinness→</a>
+            </div>
+
+            <div class="pictureright">
+              <div class="pattern-bg"></div>
+              <img src="https://kerhoula.github.io/guiness/image/stoutie.jpeg" alt="Two people printed on top of the foam of a pint of Guinness." width="100%">
+            </div>
             <!-- row3 galway -->
-            <div class="textright">text describing how on weekend 2 we took an overnight trip to galway, Explore more CTA</div>
-            <div class="pictureleft">patterned photo as background with a something gallway-ey</div></div>
+          <div class="pictureleft">
+            <div class="pattern-bg"></div>
+            <img src="images/galway/coloredhouses+me.JPG" alt="A view of Galway Bay with colorful buildings in the foreground." width="100%">
+          </div>
+
+          <div class="textright">
+            <h2> Galway Getaway </h2>
+            <p>On weekend 2 we took an overnight trip to Galway, a city on the west coast of Ireland known for its vibrant arts scene, historic sites, and stunning coastal views.</p>
+            <a href="galway.html" class="cta-button">Explore Galway→</a>
+          </div>
             <!-- row 4 footer -->
             <div class = "bottom">footer</div>
         </div>
