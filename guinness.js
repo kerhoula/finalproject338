@@ -38,12 +38,12 @@ button.addEventListener("click", () => {
     } else if(newHeight < 168){
 
         message.textContent =
-            "Too high. The G remains unsplit.";
+            "Too high. The G is unsplit. Try again!";
 
     } else {
 
         message.textContent =
-            "Too low. Mix in a water eh?";
+            "Too low. Mix in a water eh? Try again!";
     }
 
 });

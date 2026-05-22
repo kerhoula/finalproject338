@@ -11,6 +11,13 @@
 }
 
 /* GENERAL */
+h1{
+    font-size: 3.2rem;
+    font-family: Helvetica, sans-serif;
+    color: var(--dark-green)
+
+}  
+
 body{
     margin: 0;
     font-family: Helvetica, sans-serif;
@@ -462,4 +469,28 @@ border-image: repeating-linear-gradient(
     font-size: 3rem;
 }
     /* the grid-row lets me reorder my boxes when in mobile so the images are every other */
+}
+
+.highlight::before{
+    content: "HIGHLIGHT";
+    
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    font-style:normal
+}
+
+.highlight{
+    background-color: var(--cream);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--dark-grey);
+    font-style: italic;
 }
