@@ -1,0 +1,97 @@
+/* PLACES PAGE */
+.places-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.places-card{
+    padding: 5rem;
+    min-height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.places-intro{
+    background-color: var(--cream);
+}
+
+.galway-card{
+    background-color: var(--lime);
+}
+
+.cliffs-card{
+    background-color: var(--lime);
+}
+
+.dublin-card{
+    background-color: var(--yellow);
+}
+
+.eyebrow{
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    margin: 0;
+}
+
+.places-card h1{
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+    margin: 0;
+    color: var(--dark-green);
+    max-width: 9ch;
+}
+
+.places-card h2{
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    margin: 0;
+    color: var(--dark-grey);
+    max-width: 8ch;
+}
+
+.places-card p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 45ch;
+    color: var(--dark-grey);
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px){
+    @media screen and (max-width: 768px){
+
+    .places-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .places-card{
+        padding: 3rem 2rem;
+        min-height: auto;
+    }
+
+    .places-card h1{
+        font-size: 3.2rem;
+    }
+
+    .places-intro{
+        order: 1;
+    }
+
+    .galway-card{
+        order: 2;
+    }
+
+    .dublin-card{
+        order: 3;
+    }
+
+    .cliffs-card{
+        order: 4;
+    }
+}
+}

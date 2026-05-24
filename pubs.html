@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pubs</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <header>
@@ -14,13 +16,13 @@
       <img src="images/postcard.png" loading="lazy" alt="Home">
     </a>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">☰</label>
+    <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
     <ul class="nav-links">
       <li class="dropdown">
         <a href="guinness.html">Guinness</a>
         <ul class="dropdown-menu">
           <li><a href="storehouse.html">Storehouse</a></li>
-          <li><a href="pubs.html">Pubs</a></li>
+          <li><a class="current" href="pubs.html">Pubs</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -147,11 +149,13 @@
         </div>
 
         <div class="pictureright">
-            <img src="images/lord_edward/le.JPG" alt="the outside of the lord edward pub">
+            <img src="images/galway/thequays.JPG" alt="the outside of the lord edward pub">
         </div>
 
         <div class="pictureleft">
-            <img src="images/lord_edward/le.JPG" alt="the outside of the lord edward pub">
+             <video controls playsinline aria-label="Live music inside The Kings Head Pub playing Man I Feel Like a Woman."> <!-- I added an aria label here for accessibility? I don't really know what else to do bc I don't know the words-->
+        <source src="videos/kingshead.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
         </div>
 
         <div class="textright">
@@ -165,5 +169,14 @@
     <!-- --- -->
 
 </main>
+<footer class="bottom">
+
+    <a href="#main" class="back-to-top">
+        Back to Top ↑
+    </a>
+
+    <p class="footer-note">
+        University of Michigan Study Abroad • Summer 2026
+    </p>
 </body>
 </html>

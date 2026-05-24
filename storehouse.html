@@ -3,276 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guinness Storehouse at St. James's Gate</title>
+    <title>Guinness Storehouse</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <a href="#main">Skip to Main Content</a>
-
-    <header>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  
-
+<header>
+    <a class="skip-link" href="#main">Skip to main content</a>
   <nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo">
-      <img src="images/postcard.png" loading ="lazy" alt="Anna in Dublin home">
+      <img src="images/postcard.png" loading="lazy" alt="Home">
     </a>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">☰</label>
-
+    <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
     <ul class="nav-links">
-      <!-- <li><a class="current" href="index.html">Home</a></li> -->
-
       <li class="dropdown">
         <a href="guinness.html">Guinness</a>
         <ul class="dropdown-menu">
-          <li><a href="storehouse.html">Storehouse</a></li>
+          <li><a class="current" href="storehouse.html">Storehouse</a></li>
           <li><a href="pubs.html">Pubs</a></li>
         </ul>
       </li>
-
       <li class="dropdown">
         <a href="places.html">Places</a>
         <ul class="dropdown-menu">
           <li><a href="galway.html">Galway</a></li>
           <li><a href="cliffsofmoher.html">Cliffs of Moher</a></li>
           <li><a href="dublin.html">Dublin</a></li>
-
-          </ul>
+        </ul>
       </li>
       <li><a href="gallery.html">Gallery</a></li>
     </ul>
   </nav>
-  <h1>Guinness Storehouse at St. James's Gate</h1>
-        <a target="_blank" href=" ">Accessibility Review</a>
 </header>
-
 <main id="main">
-
-    <section id="summary">
-        <p>We did both the Guinness Storehouse tour and Stoutie experience. 
-            The Storehouse tour was self-guided through the building, 
-            centering around an atrium shaped like a Guinness glass, and it ended 
-            with a Guinness at the top of the building overlooking the city. The 
-            Stoutie was the Storehouse tour with an extra Guinness glass with your 
-            photo laminated on the top of the foam.</p>
-
-        <figure>
-            <img src="https://kerhoula.github.io/guiness/image/group_shot.jpeg" alt="group of people standing in front of Guinness St. James’s Gate Brewery, Dublin sign." width="400">
-            <figcaption>Group that went to Guinness Storehouse together.</figcaption>
-        </figure>
+    <section class="intro">
+        <h1>Guinness Storehouse</h1>
+        <p>
+        One of the most fun experiences we did in Dublin was visiting the Guinness Storehouse. This is a multi-level "museum" of sorts explaining how Guinness is made.
+        </p>
     </section>
 
-    <div class="controls">
-        <button type="button" class="control" data-filter="all">All</button>
-        <button type="button" class="control" data-filter=".accessible">Accessible</button>
-        <button type="button" class="control" data-filter=".non-accessible">Nonaccessible</button>
-        <button type="button" class="control" data-filter="none">None</button>
+    <div class="container">
+
+        <div class="textleft">
+            <h2>Floor G</h2>
+            <p>
+                This was the floor we walked into after getting tickets! It had the <b>gift shop</b>, and the start of our journey, exploring all the <b>ingredients</b> in Guinness.
+            </p>
+            <p class="highlight">In the gift shop, I bought a sweatshirt with all the different variations of the Guinness Harp logo!</p>
+            
+        </div>
+
+        <div class="pictureright">
+            <img src="https://kerhoula.github.io/guiness/image/barley.jpg" alt="Fake barley field with sky screen above it.">
+       </div>
+
+        <div class="pictureleft">
+    <img src="https://kerhoula.github.io/guiness/image/brewing_process.jpeg" alt="Poster explaining the steps of the brewing process.">
+    </video>
+</div>
+    
+
+        <div class="textright">
+            <h2>Floor 1</h2>
+            <p>
+                This floor was all about <b>Roasting</b> and <b>Brewing</b>! They also had a game showing how people how alcohol effects your driving.
+            </p>
+            <p class="highlight">There was a cafe and I bought a Guinness Sausage Roll. It was the best one I had all trip!</p>
+            
+        </div>
+    </div>
+    <!-- --- -->
+     <div class="container">
+
+        <div class="textleft">
+            <h2>Floor 2</h2>
+            <p>This floor was centered around the <b>Tasting Rooms</b>. First, they had us smell each of the 4 ingredients in Guinness in big barrels. Next, they gave us a guided tasting. </p>
+            <p class="highlight">I could really taste the chocolate on the tip of my tongue! It made me the rest of the Guinnesses of the trip even better!</p>
+        </div>
+
+        <div class="pictureright">
+            <img src="https://kerhoula.github.io/guiness/image/tasting_rooms.jpeg" alt="white barrel with vapor coming out of the middle surrounded by people">
+        </div>
+
+        <div class="pictureleft">
+            <video controls playsinline aria-label="Fish riding a bike statue inside the guinness storehouse"> <!-- I added an aria label here for accessibility? I don't really know what else to do bc I don't know the words-->
+        <source src="videos/fishy.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+    </video>
+        </div>
+
+        <div class="textright">
+            <h2>Floor 3</h2>
+            <p>
+            This floor was all about Guinness's <b>advertising</b>. They had some really cool art which we saw reflected in postcards and magnets in the gift shop!
+            </p>
+            <p class="highlight"> I really liked this fish guy!</p>
+        </div>
     </div>
 
     <div class="container">
 
-        <section id="accessible" class="mix accessible">
-            <h2>Accessibility Features</h2>
+        <div class="textleft">
+            <h2>Floor 4</h2>
+            <p>
+                This floor was for <b>The Academy</b>, where you learn to pour your own pint, and the <b>Stoutie Experience</b>, where you get your picture printed on the foam of a pint. We tried the stoutie experience and it was super cool!! </p>
+            <p class="highlight">I was able to sneak in Willow to be in my picture with me!</p>
+            
+        </div>
 
-            <ul>
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/accessible_lift.jpeg"
-                            alt="Sign pointing forward towards accessible-only lift."
-                            width="400">
-                        <figcaption>
-                            The Guinness Storehouse also offers an accessible-only lift, reducing wait-times for the elevator for those unable to use the stairs.
-                        </figcaption>
-                    </figure>
-                </li>
+        <div class="pictureright">
+            <video controls playsinline aria-label="Guinness being pulled out of the stoutie machine with the picture of two girls on the foam"> <!-- I added an aria label here for accessibility? I don't really know what else to do bc I don't know the words-->
+        <source src="videos/stoutie.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+        </div>
 
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/audio_guides_sign.jpeg"
-                            alt="Sign reminding guests to return their audio guides in various languages."
-                            width="400">
-                        <figcaption>
-                            The Guinness Storehouse offers Audio Guides for those whose primary language is not English. They also offer International Sign Language tours!
-                        </figcaption>
-                    </figure>
-                </li>
+        <div class="pictureleft">
+            <img src="images/arthurs.jpeg" alt="arthur's bar filled with people">
+        </div>
 
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/low_signage.jpeg"
-                            alt="Sign that is low to the ground"
-                            width="400">
-                        <figcaption>
-                            Signs were often low enough for wheelchair users to be able to read.
-                        </figcaption>
-                    </figure>
-                </li>
-
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/blind_harpist.jpeg"
-                            alt="The Guinness Harp plaque text reads The famous Downhill Harp dating back to 1702, on display here in the advertising gallery was purchased by Guinness in 1963, to ensure its continued preservation."
-                            width="400">
-                        <figcaption>
-                            Description of Guinness harp
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-
-        <section id="non-accessible" class="mix non-accessible">
-            <h2>Accessibility Concerns</h2>
-
-            <ul>
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/bad_contrast_glass.jpeg" 
-                            alt="Exhibit encased in glass with an unreadable white-label on it" 
-                            width="400">
-                        <figcaption>
-                            At various points throughout the self guided tour, there was writing on glass that was incredibly low-contrast. This could be hard to read for visually-impaired guests.
-                        </figcaption>
-                    </figure>
-                </li>
-
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/shadowy_floor.jpeg" 
-                            alt="Projected camo pattern onto dark floor" 
-                            width="400">
-                        <figcaption>
-                            The floor was often illuminated into patterns which could be hard to navigate for those who are visually-impaired.
-                        </figcaption>
-                    </figure>
-                </li>
-
-                <li>
-                    <figure>
-                        <img src="https://kerhoula.github.io/guiness/image/walkway.jpeg" 
-                            alt="Winding pathway with dim yellow lights along the sides through the wheat exhibit." 
-                            width="400">
-                        <figcaption>
-                            A majority of walkways at the beginning of our tour were dimly-lit.
-                        </figcaption>
-                    </figure>
-                </li>
-
-                <li>
-                    <figure>
-                        <video width="600" controls muted>
-                            <source src="https://kerhoula.github.io/guiness/image/moving_image_&_text.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <figcaption>
-                            While the tour was quite immersive, the large video screens could be overwhelming for guests who struggle with flashing lights or fast-moving visuals.
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-
+        <div class="textright">
+            <h2>Floor 5</h2>
+            <p>
+                We didn't spend much time here, but it seemed really cute! <b>Arthur's Bar</b>, a traditional irish pub, was pretty packed, so we headed up to the Gravity Bar!
+            </p>
+            
+        </div>
     </div>
 
-    <section id="floors">
-        <figure>
-            <img src="https://kerhoula.github.io/guiness/image/map.jpg" width="400" alt="Guinness Storehouse Map">
-            <figcaption>Guinness Storehouse Map</figcaption>
-        </figure>
+    <div class="container">
 
-        <h2>Each Floor in the Storehouse Experience:</h2>
-
-        <ul>
-            <li><p>Lower Ground Floor: This floor serves as the entry point where you can find tickets, the group entrance, and audio guides.</p></li>
-            <li><p>Ground Floor: You can explore the core ingredients of Guinness: water, barley, and hops, and visit the retail store.</p></li>
-            <li><p>Floor 1: This level features the roasting and brewing processes, the cooperage, and an exhibition space.</p></li>
-            <li><p>Floor 2: This floor is dedicated to the sensory experience of the tasting rooms and includes the Arrol Suite.</p></li>
-            <li><p>Floor 3: Visitors can enjoy a dedicated cinema room and explore various advertising exhibits.</p></li>
-            <li><p>Floor 4: This level is home to the Guinness Academy, the Connoisseur Bar, and the Stoutie experience.</p></li>
-            <li><p>Floor 5: You can find dining and drinks at the 1837 Bar & Brasserie and Arthur's Bar.</p></li>
-            <li><p>Floor 7: The top floor features the Gravity Bar, offering panoramic views while you enjoy a pint.</p></li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>Additional Guinness Storehouse Gallery</h2>
-
-        <div class="gallery-grid">
-
-            <figure>
-                <video width="400" controls muted>
-                    <source src="https://kerhoula.github.io/guiness/image/AR_artwork.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/glare.jpeg"
-                    alt="Side-view of long paragraphed text that is hard to read due to glare."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/audio_guides_banner(ISL).jpeg"
-                    alt="Overhead barrier reading audio guides, international sign language tour available with various flags depicting languages."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/signs_to_accessible_entrance.jpeg"
-                    alt="Arrow pointing right towards the wheelchair entrance outside of the Guinness Storehouse."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/barley.jpg"
-                    alt="Fake barley field with sky screen above it."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/brewing_process.jpeg"
-                    alt="The brewing process: 1 ingredients, 2 milling, 3 mashing, 4 separation, 5 boiling, 6 cooling, 7 fermentation, 8 maturation, 9 clarification, 10 packaging, 11 enjoy."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/stoutie.jpeg"
-                    alt="Two people printed on top of Guinness foam in Guinness glass."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/tasting_rooms.jpeg"
-                    alt="Guinness tasting rooms inside the Storehouse."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/tasting_sample.jpg"
-                    alt="Small Guinness tasting sample glass."
-                    width="400">
-            </figure>
-
-            <figure>
-                <img src="https://kerhoula.github.io/guiness/image/the_critical_difference.jpeg"
-                    alt="Tablet game warning people about the dangers of drunk driving."
-                    width="400">
-            </figure>
-
+        <div class="textleft">
+            <h2>The Gravity Bar</h2>
+            <p>
+             With every experience pack at the Guinness Storehouse, you are given a voucher for a pint of Guinness from the <b>Gravity Bar</b>! It was so cool to drink our pints and overlook Dublin.
+            </p>
+            <p class="highlight">An old couple gave us 2 vouchers they weren't using!</p>
         </div>
-    </section>
+
+        <div class="pictureright">
+            <img src="images/guinness_group.JPG" alt="group of four people drinking guinness in the gravity bar">
+        </div>
+
+        
 
 </main>
+<footer class="bottom">
 
-<script src="mixitup.js"></script>
+    <a href="#main" class="back-to-top">
+        Back to Top ↑
+    </a>
 
-<script>
-    var containerEl = document.querySelector('.container');
-    var mixer = mixitup(containerEl);
-</script>
-
+    <p class="footer-note">
+        University of Michigan Study Abroad • Summer 2026
+    </p>
 </body>
 </html>

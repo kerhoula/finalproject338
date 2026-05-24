@@ -152,7 +152,9 @@
 }
 
 /* HOVER */
-#split-button:hover{
+#split-button:hover,
+#split-button:focus-visible{
+
     background-color: var(--orange);
     border: 4px solid var(--dark-grey);
     color: var(--cream);

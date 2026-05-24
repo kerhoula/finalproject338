@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Gallery</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +17,7 @@
       <img src="images/postcard.png" loading="lazy" alt="Anna in Dublin home">
     </a>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">☰</label>
+    <label for="menu-toggle" class="hamburger" tabindex="0">☰</label>
     <ul class="nav-links">
       <li class="dropdown">
         <a href="guinness.html">Guinness</a>
@@ -33,14 +34,13 @@
           <li><a href="dublin.html">Dublin</a></li>
         </ul>
       </li>
-      <li><a href="gallery.html">Gallery</a></li>
+      <li><a class ="current" href="gallery.html">Gallery</a></li>
     </ul>
   </nav>
 </header>
-
+<main id="main">
 <section class="gallery" id="gallery">
-  <h2>Photo Gallery</h2>
-
+  <h1>Photo Gallery</h1>
   <div class="gallery-grid">
 <a href="images/bray/bray_water.JPG" data-lightbox="dublin-gallery" data-title="Bray">
   <img src="images/bray/bray_water.JPG" loading = "lazy" alt="water and mountains in Bray">
@@ -276,7 +276,7 @@
     </a>
 
 <a href="images/lapdance.JPG" data-lightbox="dublin-gallery" data-title="Late Night Work">
-      <img src="images/lapdance.JPG" loading = "lazy" alt="person walking down a city street at night wearing a red jacket labeled lapdance, blackjack, roulette ">
+      <img src="images/lapdance.JPG" loading = "lazy" alt="person wearing a jacket labeled lapdance, blackjack, roulette ">
     </a>
 
 <a href="images/babybottle.jpeg" data-lightbox="dublin-gallery" data-title="Guinness is Good For You">
@@ -290,6 +290,18 @@
 
   </div>
 </section>
+</main>
+<footer class="bottom">
+
+    <a href="#main" class="back-to-top">
+        Back to Top ↑
+    </a>
+
+    <p class="footer-note">
+        University of Michigan Study Abroad • Summer 2026
+    </p>
+
+</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
