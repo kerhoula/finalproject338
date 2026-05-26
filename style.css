@@ -526,7 +526,7 @@ h1{
     font-family: Helvetica, sans-serif;
     font-weight: 900;
 
-    line-height: 0.8;
+    line-height: 1.2;
     letter-spacing: 1px;
     padding: 1rem 1.25rem 0rem;
 
@@ -639,9 +639,9 @@ h1 + p{
     *,
     *::before,
     *::after {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
+        animation: none ;
+        transition: none ;
+        scroll-behavior: auto ;
     }
 }
 
@@ -649,4 +649,16 @@ h1 + p{
     color: var(--dark-grey);
 
     font-weight: bold;
+}
+
+.lb-data .lb-caption,
+.lb-data .lb-number {
+    color: var(--cream);
+    background-color: black;
+}
+
+/* external links */
+p a:link{
+    color: var(--dark-green);
+    text-decoration: underline;
 }
